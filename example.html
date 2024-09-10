@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>.switch {
+        --false: #ff00c8;
+        --true: #0400ff;
+       }
+       
+       input[type=checkbox] {
+        appearance: none;
+        height: 2rem;
+        width: 3.5rem;
+        background-color: #d9d9d9;
+        position: relative;
+        border-radius: .2em;
+        cursor: pointer;
+       }
+       
+       input[type=checkbox]::before {
+        content: '';
+        display: block;
+        height: 1.9em;
+        width: 1.9em;
+        transform: translate(-50%, -50%);
+        position: absolute;
+        top: 50%;
+        left: calc(1.9em/2 + .3em);
+        background-color: var(--false);
+        border-radius: .2em;
+        transition: .3s ease;
+       }
+       
+       input[type=checkbox]:checked::before {
+        background-color: var(--true);
+        left: calc(100% - (1.9em/2 + .3em));
+       }</style>
+</head>
+<body>
+    <br>
+    Texto
+    <br>
+    <input type="text">
+
+    <br>
+    macho
+<input type="radio" name="sexo" value="1">
+
+<br>
+femea
+<input type="radio" name="sexo" value="2">
+
+<select name="Etnia" id="">
+    <option value="1">Branco</option>
+    <option value="2"> Negro</option>
+</select>
+<label class="switch">
+    <input type="checkbox" checked="">
+  </label>
+  <br><br>
+  Peso
+  <input type="number" >
+</body>
+</html>
